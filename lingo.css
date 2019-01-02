@@ -1,0 +1,54 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url('images/bg.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a {
+    /*color: white;*/
+}
+
+.bg {
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hokje {
+    width: 65px;
+    height: 65px;
+    margin: 1px;
+    background-color: #1673b9;
+    color: white;
+    font-size: 46px;
+    font-weight: bold;
+    line-height: 1.3;
+    float: left;
+}
+
+.rondje {
+    width: 65px;
+    height: 65px;
+    margin: 1px;
+    background-color: #1673b9;
+    color: white;
+    font-size: 46px;
+    font-weight: bold;
+    line-height: 1.3;
+    float: left;
+    border-radius: 50%;
+}
+
+.roodhokje {
+    background-color: #e52d28;
+}
+
+.geelhokje {
+    background-color: yellow;
+}
