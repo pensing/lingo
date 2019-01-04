@@ -5,9 +5,26 @@ einde = false;
 getalarray = [];
 gepaktarray = [];
 
+function ajaxnieuw() {
+    alert();
+    $.ajax({
+        url: 'nieuwwoord.php',
+        type: 'POST',
+        success: function(result) {
+            alert(result); // Here, you need to use response by PHP file.
+        },
+        error: function() {
+            alert('error');
+        }
+
+    });
+}
+
+
 function nieuwwoord() {
     var x = Math.floor((Math.random() * 10) + 1);
     woord = woorden[x - 1];
+    ajaxnieuw();
     maakbordleeg();
     document.getElementById("r1k1").innerHTML = woord[0];
     document.getElementById("woord").value = "";
@@ -27,12 +44,23 @@ function maakbordleeg() {
     }
 }
 
+function validate(strValue) {
+    var objRegExp = /^[a-z]+$/;
+    return objRegExp.test(strValue);
+}
+
 function checkwoord(w) {
     //alert(document.getElementById("woord").value);
     if (einde) {
         alert("Het spel is afgelopen. Kies een nieuw woord.");
         return;
     }
+    //validate input, only letters
+    if (!validate(w)) {
+        alert("Alleen letters zijn toegestaan. Wijzig je invoer.");
+        return;
+    }
+
     geraden = (w.toUpperCase() === woord);
     dwoord = woord;
     dw = w.toUpperCase();
@@ -52,7 +80,8 @@ function checkwoord(w) {
     }
     if (!geraden) {
         //check for yellow
-        //while all checked do check w[i]
+        //while not all checked do check w[i]
+        //recursieve methode?
     }
 
     if (geraden) {
