@@ -1,4 +1,4 @@
-woord = "LINGO";
+//woord = "LINGO";
 woorden = ["LINGO", "KEREL", "APPEL", "STIER", "DRUIF", "STROP", "KATER", "DRANK", "SNOEP", "VLEES"];
 poging = 1;
 einde = false;
@@ -20,11 +20,24 @@ function ajaxnieuw() {
     });
 }
 
+function getWoord() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            woord = this.responseText;
+            woord = woord.toUpperCase();
+        }
+    };
+    xhttp.open("GET", "nieuwwoord.php", false);
+    xhttp.send();
+}
 
 function nieuwwoord() {
     var x = Math.floor((Math.random() * 10) + 1);
-    woord = woorden[x - 1];
-    ajaxnieuw();
+    //woord = woorden[x - 1];
+    //ajaxnieuw();
+    getWoord();
+    //alert(woord);
     maakbordleeg();
     document.getElementById("r1k1").innerHTML = woord[0];
     document.getElementById("woord").value = "";
