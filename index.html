@@ -21,16 +21,21 @@
 <body>
 
     <!-- Kop/header -->
-    <div class="container-fluid align-middle" style="text-align:center;background-color:transparent;height:100vh;">
+    <div class="container-fluid" style="background-color:transparent; height:100vh;">
 
-        <h2 class="display-2 text-white font-weight-bold pt-4" style="color:white !important; position: fixed; left:50%; margin-left:-400px;">WELKOM BIJ LINGO</h2>
+        <div class="" style="width: auto; height: 150px;">
+            <h2 class="display-2 text-center text-white font-weight-bold" style="width:100%; color:white !important; position: fixed; left: 50%; margin-left: -50%;">WELKOM BIJ LINGO</h2>
+        </div>
 
-        <a href="#leiders" class="btn btn-outline-primary btn-lg" role="button" style="position: absolute; bottom: 50px; background-color: white;">Selecteer spelleider</a>
+        <div class="mx-auto mt-0" style="width: 150px;">
+            <a class="btn btn-primary btn-lg" href="#leiders" role="button">START</a>
+        </div>
+        <!-- <a href="#leiders" class="mx-auto"></a><button type="button" class="btn btn-primary btn-lg mx-auto" style="width:100px; position: absolute; bottom: 50px;">START</button></a> -->
 
     </div>
 
-    <div id="leiders" class="bg-white" style="padding-top:100px;padding-bottom:100px;">
-
+    <div id="leiders" class="bg-white pt-4" style="height: 80vh;">
+        <h4 class="display-4 text-center text-primary pt-4 pb-4" style="width: auto;">Kies je spelleider</h4>
         <div class="container" style="100vh;">
             <div class="row">
                 <div class="col-sm">
@@ -39,7 +44,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Robert</h5>
                             <p class="card-text">1989-1992</p>
-                            <a href="woordspel.html" class="btn btn-primary">Go</a>
+                            <a href="woordspel.php?leider=robert" class="btn btn-primary">Go</a>
                         </div>
                     </div>
                 </div>
@@ -49,7 +54,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Francois</h5>
                             <p class="card-text">1992-2000</p>
-                            <a href="#" class="btn btn-primary">Go</a>
+                            <a href="woordspel.php?leider=francois" class="btn btn-primary">Go</a>
                         </div>
                     </div>
                 </div>
@@ -59,7 +64,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Nance</h5>
                             <p class="card-text">2000-2005</p>
-                            <a href="#" class="btn btn-primary">Go</a>
+                            <a href="woordspel.php?leider=nance" class="btn btn-primary">Go</a>
                         </div>
                     </div>
                 </div>
@@ -69,7 +74,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Lucille</h5>
                             <p class="card-text">2005-2014</p>
-                            <a href="#" class="btn btn-primary">Go</a>
+                            <a href="woordspel.php?leider=lucille" class="btn btn-primary">Go</a>
                         </div>
                     </div>
                 </div>
