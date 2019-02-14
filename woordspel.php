@@ -31,10 +31,6 @@ switch ($leider) {
 <body>
 
     <!-- Kop/header -->
-  <!-- <iframe frameborder="0" height="100%" width="100%" 
-    src="https://youtube.com/embed/UY9V5S9MEgk?autoplay=1&controls=0&showinfo=0&autohide=1">
-  </iframe> -->
-
   <div class="video-background">
     <div class="video-foreground">
     <!-- <iframe src="https://www.youtube.com/embed/<?php echo $id; ?>?controls=1&showinfo=0&rel=0&autoplay=1&loop=1&playlist=<?php echo $id; ?>" frameborder="0" allowfullscreen></iframe> -->
@@ -46,9 +42,10 @@ switch ($leider) {
 
     <div class="container-fluid align-middle" style="text-align:center;background-color:transparent;height:80vh;">
 
-        <h3 class="display-3 text-white font-weight-bold pt-4" style="color:white !important">LINGO - Gepresenteerd door <?php echo $leider; ?></h3>
+        <h3 class="display-3 text-white font-weight-bold pt-4" style="color:white !important">spelleider <?php echo ucfirst($leider); ?></h3>
 
-        <button class="btn btn-light" onclick="nieuwwoord()">Nieuw woord</button>
+        <button class="btn btn-light mt-2" onclick="nieuwwoord()">Nieuw woord</button>
+        <a class="btn btn-light mt-2" href="getalspel.html">Ballen pakken</a>
 
         <div style="margin:auto;margin-top:50px;width:335px;height:335px;background-color:white;">
 
@@ -95,14 +92,9 @@ switch ($leider) {
         </div>
 
         <div style="margin:auto;margin-top:50px;width:345px;height:auto;">
-            <!-- form action="/action_page.php" style="margin-top:0px; width:335px; height: 70px; margin-left:5px; background-color:#e52d28; color:white; font-size:46px; font-weight:bold">
-            <input type="text" name="firstname" value="Mickey">
-            <input type="submit" value="Check">
-            </form -->
             <div style="margin-top:0px; width:335px; height: 70px; margin-left:5px; background-color:transparent; color:white; font-size:46px; font-weight:bold">
                 <input id="woord" type="text" name="woord" value="" placeholder="....." maxlength="5" style="width:200px; text-transform: uppercase; padding-left: 12px;letter-spacing: 10px; font-weight: bold; font-size: 36px; background-color:#e52d28; color:white;">
                 <br>
-                <!-- <input class="btn btn-light" type="button" onclick='checkwoord(document.getElementById("woord").value)' value="Check" style="margin-top: 20px; font-size: 20px;"> -->
                 <button class="btn btn-light" onclick='checkwoord(document.getElementById("woord").value)'>Controleren</button>
             </div>
         </div>
